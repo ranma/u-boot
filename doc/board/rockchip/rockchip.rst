@@ -78,6 +78,7 @@ List of mainline supported Rockchip boards:
      - FriendlyARM NanoPi NEO4 (nanopi-neo4-rk3399)
      - Google Bob (chromebook_bob)
      - Google Kevin (chromebook_kevin)
+     - Google Scarlet (chromebook_scarlet)
      - Khadas Edge (khadas-edge-rk3399)
      - Khadas Edge-Captain (khadas-edge-captain-rk3399)
      - Khadas Edge-V (hadas-edge-v-rk3399)

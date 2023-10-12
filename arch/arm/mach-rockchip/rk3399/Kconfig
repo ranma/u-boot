@@ -25,6 +25,18 @@ config TARGET_CHROMEBOOK_KEVIN
 	  a Chromium OS EC (Cortex-M3) to provide access to the keyboard and
 	  battery functions.
 
+config TARGET_CHROMEBOOK_SCARLET
+	bool "Acer Chromebook Tab 10 (RK3399)"
+	select HAS_ROM
+	select ROCKCHIP_SPI_IMAGE
+	help
+	  Scarlet is a RK3399-based tablet-formfactor chromebook. It has one
+	  USB 3.0 Type-C port, 4GB of SDRAM, WiFi and a 9.7" 1536x2048
+	  display. It uses its USB port for both power and external display.
+	  It includes a Chromium OS EC (Cortex-M3) to provide access to the
+	  keyboard and battery functions and supports closed case debug
+	  using the Cr50 Google Security Chip and SuzyQ cable.
+
 config TARGET_EVB_RK3399
 	bool "RK3399 evaluation board"
 	help

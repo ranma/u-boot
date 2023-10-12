@@ -12,3 +12,11 @@ S:	Maintained
 F:	board/google/gru/
 F:	include/configs/gru.h
 F:	configs/chromebook_kevin_defconfig
+
+CHROMEBOOK SCARLET BOARD
+M:	Simon Glass <sjg@chromium.org>
+M:	Tobias Diedrich <ranma+github@tdiedrich.de>
+S:	Maintained
+F:	board/google/gru/
+F:	include/configs/gru.h
+F:	configs/chromebook_scarlet_defconfig

@@ -25,6 +25,7 @@
 	ec-interrupt = <&gpio0 RK_PA1 GPIO_ACTIVE_LOW>;
 };
 
+#if !defined(CONFIG_TARGET_CHROMEBOOK_SCARLET)
 &edp {
 	rockchip,panel = <&edp_panel>;
 };
@@ -34,11 +35,12 @@
 	regulator-max-microvolt = <1800000>;
 };
 
-&ppvar_bigcpu_pwm {
+&ppvar_centerlogic_pwm {
 	regulator-init-microvolt = <900000>;
 };
+#endif
 
-&ppvar_centerlogic_pwm {
+&ppvar_bigcpu_pwm {
 	regulator-init-microvolt = <900000>;
 };
 

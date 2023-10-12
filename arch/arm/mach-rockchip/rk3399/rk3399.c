@@ -150,6 +150,13 @@ void board_debug_uart_init(void)
 		 * Let's enable these power rails here, we are already running
 		 * the SPI-Flash-based code.
 		 */
+#if defined(CONFIG_TARGET_CHROMEBOOK_SCARLET)
+		/* PP1500_EN is EC-controlled on Scarlet */
+
+		spl_gpio_output(gpio, GPIO(BANK_B, 1), 1);  /* PP3000_EN */
+		spl_gpio_set_pull(&pmugrf->gpio0_p, GPIO(BANK_B, 1),
+				  GPIO_PULL_NORMAL);
+#else
 		spl_gpio_output(gpio, GPIO(BANK_B, 2), 1);  /* PP1500_EN */
 		spl_gpio_set_pull(&pmugrf->gpio0_p, GPIO(BANK_B, 2),
 				  GPIO_PULL_NORMAL);
@@ -157,6 +164,7 @@ void board_debug_uart_init(void)
 		spl_gpio_output(gpio, GPIO(BANK_B, 4), 1);  /* PP3000_EN */
 		spl_gpio_set_pull(&pmugrf->gpio0_p, GPIO(BANK_B, 4),
 				  GPIO_PULL_NORMAL);
+#endif
 	}
 
 	/* Enable early UART2 channel C on the RK3399 */
